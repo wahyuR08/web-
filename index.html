@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI DESAIN PRODUKTIF BUSANA - SMEKTA</title>
+    <style>
+         /* Animasi Gradasi */
+         @keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg,  #fad5e2, #FAA5CA, #fad5e2,  #FAA5CA); /* Warna gradasi */
+    background-size: 300% 300%; /* Memperbesar gradasi untuk efek animasi */
+    animation: gradientAnimation 10s ease infinite; /* Terapkan animasi */
+}  
+
+        header {
+            background-color: #DB7093;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+    
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #DB7093;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #DB7093;
+        }
+
+        /* Section visibility */
+        .section {
+            display: none;
+        }
+
+      
+        .logo {
+  display: inline-block;
+  vertical-align: middle ;
+  margin-right: 20px;
+}
+
+
+.title {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+  font-weight: bold;
+}
+        /* Welcome Screen Styling */
+        .welcome-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            text-align: center;
+        }
+
+        .welcome-content {
+            background-color: #DB7093;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-content button {
+            background-color: #ffdd57;
+            color: #DB7093;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .welcome-content button:hover {
+            background-color: #ffbb33;
+        }
+
+        /* New Section after welcome screen */
+        .main-welcome {
+            display: none;
+            text-align: center;
+        }
+
+        .main-welcome img {
+            width: 200px;
+            height: auto;
+        }
+
+        .main-welcome h2 {
+            font-size: 36px;
+            color: #DB7093;
+            margin-top: 20px;
+        }
+
+        /* Styling for cards */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+    background: linear-gradient(145deg, #fcfcfc, #f99dc6); /* Gradasi linear */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 230px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Menyesuaikan teks agar kontras */
+}
+
+        .card img {
+    width: 90px;
+    height: 100px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    margin-bottom: 15px;
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
+
+        .card h3 {
+            margin: 10px 0;
+            color: #DB7093;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+   
+    </style>
+</head>
+
+<body>
+
+    <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-content">
+            <h1>SELAMAT DATANG DI WEBSITE KELAS XI DPB</h1>
+            <p>KLICK MASUK UNTUK MEMBUKA DATA!!</p>
+            <button onclick="closeWelcomeScreen()">Masuk</button>
+        </div>
+    </div>
+</div>
+
+    <!-- Header -->
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; text-align: center; gap: 20px;">
+            <!-- Logo Kiri -->
+            <img src="logosmk.png" alt="Logo Kiri" style="width: 90px; height: auto;">
+        
+            <!-- Tulisan -->
+            <div>
+                <h1>XI DESAIN PRODUKTIF BUSANA</h1>
+                <p>Selamat datang di halaman kelas kami!</p>
+                <p>Tahun ajaran 2024-2025</p>
+            </div>
+        
+            <!-- Logo Kanan -->
+            <img src="LogoTB.png" alt="Logo Kanan" style="width: 85px; height: auto;">
+        </div>
+        
+    </header>
+
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a onclick="showSection('data-siswa')">Data Siswa</a>
+        <a onclick="showSection('data-guru')">Data Guru</a>
+        <a onclick="showSection('struktur-kelas')">Struktur Kelas</a>
+        <a onclick="showSection('daftar-piket')">Daftar Piket</a>
+        <a onclick="showSection('jadwal-pelajaran')">Jadwal Pelajaran</a>
+        <a onclick="showSection('kegiatan-kelas')">Kegiatan Kelas</a>
+        <a onclick="showSection('gallery-foto')">Gallery Foto</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Data Siswa -->
+        <section id="data-siswa" class="section">
+            <h2>Data Siswa</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="ab1.jpg" alt="Foto Siswa 1">
+                    <h3>ALFA NIAMA ULIS SORAYA</h3>
+                    <p><strong>No.Absen:</strong> 01</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Pasar Kambang,2008-08-06</p>
+                    <p><strong>NISN:</strong> 0081820710</p>
+                    <p><strong>Alamat:</strong> kembang Barat</p>
+                    <p><strong>Kecamatan:</strong> Lengayan</p>
+                </div>
+                <div class="card">
+                    <img src="ab2.jpg" alt="Foto Siswa 2">
+                    <h3>AMELIA RIZKY</h3>
+                    <p><strong>No.Absen:</strong> 02</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-11-21</p>
+                    <p><strong>NISN:</strong> 0076951439</p>
+                    <p><strong>Alamat:</strong>Karangrejo</p>
+                    <p><strong>Kecamatan:</strong> Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab3.jpg" alt="Foto Siswa 3">
+                    <h3>DEVINA ESTYA RHASA</h3>
+                    <p><strong>No.Absen:</strong> 03</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-08-14</p>
+                    <p><strong>NISN:</strong> 0074562658</p>
+                    <p><strong>Alamat:</strong> Gemulung</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab4.jpg" alt="Foto Siswa 4">
+                    <h3>DINA LESTARI</h3>
+                    <p><strong>No.Absen:</strong> 04</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-06-25</p>
+                    <p><strong>Alamat:</strong> Mander</p>
+                    <p><strong>NISN:</strong> 0081885121</p>
+                    <p><strong>Kecamatan:</strong> Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab6.jpg" alt="Foto Siswa 5">
+                    <h3>DIVA DEVI DEVINDA</h3>
+                    <p><strong>No.Absen:</strong> 05</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong>  Tuban,2007-11-15</p>
+                    <p><strong>NISN:</strong> 0078277525</p>
+                    <p><strong>Alamat:</strong> Temaji</p>
+                    <p><strong>Kecamatan:</strong>Jenu</p>
+                </div>
+                <div class="card">
+                    <img src="ab7.jpg" alt="Foto Siswa 6">
+                    <h3>EFI ZUMROTUN NISA</h3>
+                    <p><strong>No.Absen:</strong> 06</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-07-29</p>
+                    <p><strong>NISN:</strong> 0079488052</p>
+                    <p><strong>Alamat:</strong> Sawir</p>
+                    <p><strong>Kecamatan:</strong> Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab8.jpg" alt="Foto Siswa 7">
+                    <h3>EKA FEBIA DISTINA</h3>
+                    <p><strong>No.Absen:</strong> 07</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-03-04</p>
+                    <p><strong>NISN:</strong> 0087426746</p>
+                    <p><strong>Alamat:</strong> Trantang</p>
+                    <p><strong>Kecamatan:</strong> Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab9.jpg" alt="Foto Siswa 8">
+                    <h3>EMA SOVIYANA</h3>
+                    <p><strong>No.Absen:</strong> 08</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-01-15</p>
+                    <p><strong>NISN:</strong>  0083486086</p>
+                    <p><strong>Alamat:</strong>  Ngampelrejo</p>
+                    <p><strong>Kecamatan:</strong>Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab10.jpg" alt="Foto Siswa 9">
+                    <h3>FAQRUNNISA</h3>
+                    <p><strong>No.Absen:</strong> 09</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Binjai,2008-12-16</p>
+                    <p><strong>NISN:</strong> 0087565268</p>
+                    <p><strong>Alamat:</strong> Jati Makmur</p>
+                    <p><strong>Kecamatan:</strong> Binjai Utara</p>
+                </div>
+                <div class="card">
+                    <img src="ab11.jpg" alt="Foto Siswa 10">
+                    <h3>FILHADINI ASMARANI</h3>
+                    <p><strong>No.Absen:</strong> 10</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-11-06</p>
+                    <p><strong>NISN:</strong>  0076554168</p>
+                    <p><strong>Alamat:</strong> Dasin</p>
+                    <p><strong>Kecamatan:</strong> Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab12.jpg" alt="Foto Siswa 11">
+                    <h3>ISWATUL KHOIRIYAH</h3>
+                    <p><strong>No.Absen:</strong> 11</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-08-14 </p>
+                    <p><strong>NISN:</strong>0082732141</p>
+                    <p><strong>Alamat:</strong> Boncong</p>
+                    <p><strong>Kecamatan:</strong>Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab13.jpg" alt="Foto Siswa 12">
+                    <h3>ITA NURUN AFIAH</h3>
+                    <p><strong>No.Absen:</strong> 12</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-08-10</p>
+                    <p><strong>NISN:</strong> 0073261350</p>
+                    <p><strong>Alamat:</strong>  Dasin</p>
+                    <p><strong>Kecamatan:</strong> Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab14.jpg" alt="Foto Siswa 13">
+                    <h3>NGARIYATI</h3>
+                    <p><strong>No.Absen:</strong> 13</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong>Tuban,2007-11-18 </p>
+                    <p><strong>NISN:</strong> 007827554</p>
+                    <p><strong>Alamat:</strong> Gaji</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab15.jpg" alt="Foto Siswa 14">
+                    <h3>NOVI JULIYANA SALSABILA AZZAHRA</h3>
+                    <p><strong>No.Absen:</strong> 14</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-07-17 </p>
+                    <p><strong>NISN:</strong>0074134231</p>
+                    <p><strong>Alamat:</strong> Purworejo</p>
+                    <p><strong>Kecamatan:</strong>Jenu</p>
+                </div>
+                <div class="card">
+                    <img src="ab16.jpg" alt="Foto Siswa 15">
+                    <h3>OLIVIA</h3>
+                    <p><strong>No.Absen:</strong> 15</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-06-17</p>
+                    <p><strong>NISN:</strong> 0087902529</p>
+                    <p><strong>Alamat:</strong>  Gaji</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab17.jpg" alt="Foto Siswa 16">
+                    <h3>PUTRI FEBRIYANTI</h3>
+                    <p><strong>No.Absen:</strong> 16</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-02-26</p>
+                    <p><strong>NISN:</strong>0087911320</p>
+                    <p><strong>Alamat:</strong>Mliwang </p>
+                    <p><strong>Kecamatan:</strong> Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab18.jpg" alt="Foto Siswa 17">
+                    <h3>RIA DWI WAHYUNI</h3>
+                    <p><strong>No.Absen:</strong> 17</p>
+                    <p><strong>Jenis Kelamin:</strong>Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-02-18</p>
+                    <p><strong>NISN:</strong>0085657232</p>
+                    <p><strong>Alamat:</strong>Sumberan</p>
+                    <p><strong>Kecamatan:</strong> Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab19.jpg" alt="Foto Siswa 18">
+                    <h3>SALSABILLA ZAHRA RARAMADHANI</h3>
+                    <p><strong>No.Absen:</strong> 18</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-09-29</p>
+                    <p><strong>NISN:</strong>0086541695</p>
+                    <p><strong>Alamat:</strong>Kayen</p>
+                    <p><strong>Kecamatan:</strong>Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab20.jpg" alt="Foto Siswa 19">
+                    <h3>SHOLKHATUN NISWATUL KHASANAH</h3>
+                    <p><strong>No.Absen:</strong> 19</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong>Tuban,2007-11-27</p>
+                    <p><strong>NISN:</strong> 0082761598</p>
+                    <p><strong>Alamat:</strong> Purworwjo</p>
+                    <p><strong>Kecamatan:</strong> Jenu</p>
+                </div>
+                <div class="card">
+                    <img src="ab21.jpg" alt="Foto Siswa 20">
+                    <h3>SINTA PUTRI DEWI CAHYANI</h3>
+                    <p><strong>No.Absen:</strong> 20</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Jombang,2007-08-09</p>
+                    <p><strong>NISN:</strong> 0073665207</p>
+                    <p><strong>Alamat:</strong> Ngampelrejo</p>
+                    <p><strong>Kecamatan:</strong>Bancar</p>
+                </div>
+                <div class="card">
+                    <img src="ab22.jpg" alt="Foto Siswa 21">
+                    <h3>SINTAWATI</h3>
+                    <p><strong>No.Absen:</strong> 21</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-06-04</p>
+                    <p><strong>NISN:</strong> 0086567196</p>
+                    <p><strong>Alamat:</strong> Gemulung</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab23.jpg" alt="Foto Siswa 22">
+                    <h3>SITI MAISAROH</h3>
+                    <p><strong>No.Absen:</strong> 22</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong>  Tuban,2007-08-11</p>
+                    <p><strong>NISN:</strong> 0089910298</p>
+                    <p><strong>Alamat:</strong> Socorejo</p> 
+                    <p><strong>Kecamatan:</strong> Jenu</p>
+                </div>
+                <div class="card">
+                    <img src="ab24.jpg" alt="Foto Siswa 23">
+                    <h3>STALISUL MAHWADAH</h3>
+                    <p><strong>No.Absen:</strong> 23</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-02-14</p>
+                    <p><strong>NISN:</strong>0076263476</p>
+                    <p><strong>Alamat:</strong> Dasin</p>
+                    <p><strong>Kecamatan:</strong>Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab25.jpg" alt="Foto Siswa 24">
+                    <h3>WALLAILATUL IZNA</h3>
+                    <p><strong>No.Absen:</strong> 24</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2007-12-10</p>
+                    <p><strong>NISN:</strong>0076734528</p>
+                    <p><strong>Alamat:</strong>Dikir</p>
+                    <p><strong>Kecamatan:</strong> Tambakboyo</p>
+                </div>
+                <div class="card">
+                    <img src="ab26.jpg" alt="Foto Siswa 25">
+                    <h3>WINDA MELINA</h3>
+                    <p><strong>No.Absen:</strong> 25</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong> Tuban,2008-03-24</p>
+                    <p><strong>NISN:</strong> 0081060709</p>
+                    <p><strong>Alamat:</strong> Gemulung</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+                <div class="card">
+                    <img src="ab27.jpg" alt="Foto Siswa 26">
+                    <h3>WINDI</h3>
+                    <p><strong>No.Absen:</strong> 26</p>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Tanggal Lahir:</strong>Tuban,2007-04-09</p>
+                    <p><strong>NISN:</strong>007653193</p>
+                    <p><strong>Alamat:</strong>Gemulung</p>
+                    <p><strong>Kecamatan:</strong>Kerek</p>
+                </div>
+               
+            </div>
+        </section>
+
+        <!-- Data Guru -->
+        <section id="data-guru" class="section">
+          <h2>Data Guru</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="BUTATA" alt="Foto Guru 1">
+                    <h3>ARIESTA IKA SOFIANA</h3>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Lahir:</strong>Tuban</p>
+                    <p><strong>Tgl Lahir:</strong>1987-04-09</p>
+                    <p><strong>Status Kepegawaian:</strong>Honor Daerah TK.I Provinsi</p>
+                    <p><strong>Jabatan:</strong>Guru Matematika</p>
+                </div>
+                <div class="card">
+                    <img src="BUETY.jpeg" alt="Foto Guru 2">
+                    <h3>ETTY SETIAWATI</h3>
+                    <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                    <p><strong>Tempat Lahir:</strong>Surabaya</p>
+                    <p><strong>Tgl Lahir:</strong>1975-08-16</p>
+                    <p><strong>Status Kepegawaian:</strong>PPPK</p>
+                    <p><strong>Jabatan:</strong>Guru PPKN</p>
+               </div>
+               <div class="card">
+                <img src="BUYULI.jpeg" alt="Foto Guru 1">
+                <h3>YULI ROHMAWATI</h3>
+                <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                <p><strong>Tempat Lahir:</strong>TUBAN</p>
+                <p><strong>Tgl Lahir:</strong>1993-07-20</p>
+                <p><strong>Status Kepegawaian:</strong>PPPK</p>
+                <p><strong>Jabatan:</strong>Guru SEJARAH</p>
+            </div>
+            <div class="card">
+                <img src="PAKRASMU.jpeg" alt="Foto Guru 2">
+                <h3>RASMU</h3>
+                <p><strong>Jenis Kelamin:</strong> Laki-Laki</p>
+                <p><strong>Tempat Lahir:</strong>TUBAN</p>
+                <p><strong>Tgl Lahir:</strong>1987-09-21</p>
+                <p><strong>Status Kepegawaian:</strong>PNS</p>
+                <p><strong>Jabatan:</strong>Guru PAIBP</p>
+           </div>
+           <div class="card">
+               <img src="BUARUM.jpeg" alt="Foto Guru 1">
+               <h3>RUMIATUN</h3>
+                <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+                <p><strong>Tempat Lahir:</strong>TUBAN</p>
+                <p><strong>Tgl Lahir:</strong>1989-06-28</p>
+                <p><strong>Status Kepegawaian:</strong>PPPK</p>
+                <p><strong>Jabatan:</strong>Guru BAHASA INGGRIS</p>
+           </div>
+           <div class="card">
+               <img src="PAKAGUS.jpeg" alt="Foto Guru 2">
+               <h3>AGUS SETIYONO</h3>
+               <p><strong>Jenis Kelamin:</strong> Laki-Laki</p>
+               <p><strong>Tempat Lahir:</strong>TUBAN</p>
+               <p><strong>Tgl Lahir:</strong>1987-08-19</p>
+               <p><strong>Status Kepegawaian:</strong>PPPK</p>
+               <p><strong>Jabatan:</strong>Guru PJOK</p>
+        </div>
+           <div class="card">
+               <img src="pak farid.jpeg" alt="Foto Guru 1">
+               <h3>FARID NURUL HUDA</h3>
+               <p><strong>Jenis Kelamin:</strong> Laki-Laki</p>
+               <p><strong>Tempat Lahir:</strong>TUBAN</p>
+               <p><strong>Tgl Lahir:</strong>1986-05-04</p>
+               <p><strong>Status Kepegawaian:</strong>PPPK</p>
+               <p><strong>Jabatan:</strong>Guru BK</p>
+        </div>
+           <div class="card">
+               <img src="BUMUK.jpeg" alt="Foto Guru 2">
+               <h3>MU'AENI</h3>
+               <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+               <p><strong>Tempat Lahir:</strong>TUBAN</p>
+               <p><strong>Tgl Lahir:</strong>1981-08-22</p>
+               <p><strong>Status Kepegawaian:</strong>PPPK</p>
+               <p><strong>Jabatan:</strong>Guru PKK</p>
+        </div>
+            <div class="card">
+               <img src="BUELY.jpeg" alt="Foto Guru 1">
+               <h3>ELYANA CYNTIA DEWI</h3>
+               <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+               <p><strong>Tempat Lahir:</strong>TUBAN</p>
+               <p><strong>Tgl Lahir:</strong>1992-09-22</p>
+               <p><strong>Status Kepegawaian:</strong>Honor Daerah TK.I Provinsi</p>
+               <p><strong>Jabatan:</strong>Guru BAHASA INDONESIA</p>
+        </div>
+            <div class="card">
+              <img src="BURIDHA.jpeg" alt="Foto Guru 2">
+              <h3>RIDHA NOVITA SARI</h3>
+              <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+               <p><strong>Tempat Lahir:</strong>TUBAN</p>
+               <p><strong>Tgl Lahir:</strong>1994-01-12</p>
+               <p><strong>Status Kepegawaian:</strong>PPPK</p>
+               <p><strong>Jabatan:</strong>Guru BAHASA JAWA</p>
+        </div>
+            <div class="card">
+              <img src="BUHASTI.jpeg" alt="Foto Guru 1">
+              <h3>MAULIDYAH HASTI CHASANAH</h3>
+              <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+              <p><strong>Tempat Lahir:</strong>TUBAN</p>
+              <p><strong>Tgl Lahir:</strong>1992-09-10</p>
+              <p><strong>Status Kepegawaian:</strong>PPPK</p>
+              <p><strong>Jabatan:</strong>Guru PRODUKTIF BUSANA</p>
+        </div>
+           <div class="card">
+             <img src= "BUIDA.jpeg" alt="Foto Guru 2">
+             <h3>SITI IDA NUR JANAH</h3>
+             <p><strong>Jenis Kelamin:</strong> Perempuan</p>
+             <p><strong>Tempat Lahir:</strong>BOJONEGORO</p>
+             <p><strong>Tgl Lahir:</strong>1992-04-29</p>
+             <p><strong>Status Kepegawaian:</strong>PNS</p>
+             <p><strong>Jabatan:</strong>Guru PRODUKTIF BUSANA</p>
+         </div>
+       </section>
+       <section id="struktur-kelas" class="section">
+        <h2>Struktur Kelas</h2>
+       <div>
+        <img src="struktur kelas.jpeg" alt="Foto Kegiatan 1" width="100%">
+       </div>
+    </section>
+    
+        <section id="daftar-piket" class="section">
+            <h2>Daftar Piket</h2>
+            <div style="overflow-x:auto; max-width: 100%; max-height: 400px; overflow-y:auto;">
+                <table style="width: 100%; text-align: left; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead>
+                        <tr style="background-color: #DDA0DD; color: white;">
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Senin</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Selasa</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Rabu</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Kamis</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">jumat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">WINDI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">AMEL</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">ALFA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">DIVA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">EVI</td>
+
+
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">EKA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">PUTRI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">NISA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">ANIS</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">WINDA</td>
+                           
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">IZNA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">DINA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">ISWA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">SINTA P.</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">OLIVIA</td>
+                          
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">SALSABILA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">EMA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">DINI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">SINTA W.</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">MAISAROH</td>
+                         
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">NGARIYATI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">NOVI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">ALDA</td>
+                       
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">HESTI</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">RIA</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">-</td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Jadwal Pelajaran -->
+        <section id="jadwal-pelajaran" class="section">
+            <h2>Jadwal Pelajaran</h2>
+            <div style="overflow-x:auto; max-width: 100%; max-height: 400px; overflow-y:auto;">
+                <table style="width: 100%; text-align: left; border-collapse: collapse; font-family: Arial, sans-serif;">
+                    <thead>
+                        <tr style="background-color: #d786c7; color: white;">
+                            <th style="background-color: #d786c7; color: white; text-align: center; vertical-align: middle;">Hari/Jam</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">07.00-07.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">07.40-08.20</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">08.20-09.00</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">09.00-09.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">10.00-10.40</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">10.40-11.20</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">11.20-12.00</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">12.30-13.10</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">13.10-13.50</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">13.50-14.30</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">14.30-15.10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #f9f9f9;">
+                            <th style="background-color: white; color: black; text-align: center; vertical-align: middle;">Senin</th>
+                            <td style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Upacara</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Matematika</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Penjaskes</td>
+                            <td colspan="2"  style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Sejarah</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">PAI</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <th style="background-color: white; color: black; text-align: center; vertical-align: middle;">Selasa</th>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">PKK</td>
+                            <td colspan="4" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B.Inggris</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B.Jawa</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">PPKN</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <th style="background-color:white; color: black; text-align: center; vertical-align: middle;">Rabu</th>
+                            <td colspan="4" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                            <td colspan="3" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">B.Indonesia</td>
+                            <td colspan="4" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                        </tr>
+                        <tr style="background-color: #f9f9f9;">
+                            <th style="background-color:white; color: black; text-align: center; vertical-align: middle;">Kamis</th>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                            <td colspan="5" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">PKK</td>
+                            <td colspan="2" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <th style="background-color: white; color: black; text-align: center; vertical-align: middle;">Jumat</th>
+                            <td colspan="5" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">Produktif DPB</td>
+                            <td colspan="6" style="padding: 12px; border: 1px solid #ddd;text-align: center; vertical-align: middle;">BK</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Kegiatan Kelas -->
+        <section id="kegiatan-kelas" class="section">
+            <h2>Kegiatan Kelas</h2>
+            <ul>
+                <li><strong>Jumat religi 2 minggu sekali
+                <li><strong>Kunjungan Industri ke benang biru Yogyakarta</strong> - 26 September 2024</li>
+               
+            </ul>
+        </section>
+
+        <!-- Gallery Foto -->
+        <section id="gallery-foto" class="section">
+            <h2>Gallery Foto</h2>
+            <div id="gallery" class="gallery">
+                <img src="fb1.jpeg" alt="Foto Kegiatan 1">
+                <img src="fb2.jpeg" alt="Foto Kegiatan 2">
+                <img src="fb5.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb6.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb7.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb8.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb9.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb10.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb11.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb12.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb13.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb14.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb15.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb20.jpeg" alt="Foto Kegiatan 3">
+                <img src="fb21.jpeg" alt="Foto Kegiatan 3">
+            </div>
+
+        </section>
+    </div>
+
+   
+
+    <script>
+        // Fungsi untuk menampilkan section berdasarkan ID yang dipilih
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(function (section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Fungsi untuk menutup tampilan sambutan
+        function closeWelcomeScreen() {
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('main-welcome').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
